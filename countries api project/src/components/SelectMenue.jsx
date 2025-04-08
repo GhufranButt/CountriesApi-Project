@@ -2,7 +2,7 @@ import React from "react";
 
 const SelectMenue = () => {
   return (
-    <select class="filter-by-region">
+    <select className="filter-by-region">
       <option hidden>Filter by Region</option>
       <option value="Africa">Africa</option>
       <option value="America">America</option>

@@ -1,19 +1,19 @@
 import React from "react";
 
-const CountryCard = () => {
+const CountryCard = ({ name, population, region, capital, flags }) => {
   return (
-    <a className="country-card" href="/country.html?name=Barbados">
-      <img src="https://flagcdn.com/bb.svg" alt="Barbados-flag" />
+    <a className="country-card" href={`/country.html?name=${name}`}>
+      <img src={flags} alt={name} />
       <div className="card-text">
-        <h3 className="card-title">Barbados</h3>
+        <h3 className="card-title">{name}</h3>
         <p>
-          <b>Population: </b>
+          <b>Population: {population}</b>
         </p>
         <p>
-          <b>Region:</b>
+          <b>Region :</b> {region}
         </p>
         <p>
-          <b>Capital:</b>
+          <b>Capital :</b> {capital}
         </p>
       </div>
     </a>
