@@ -129,13 +129,14 @@ a {
 
 .filter-by-region {
   width: 250px;
-  padding: 16px;
+  padding: 14px;
   border: none;
   outline: none;
   box-shadow: 0 0 8px 0px rgba(0, 0, 0, 0.15);
   border-radius: 4px;
   background-color: var(--elements-color);
   color: var(--text-color);
+  cursor: pointer;
 }
 
 @media (max-width: 768px) {
@@ -154,4 +155,23 @@ a {
   .search-filter-container {
     flex-direction: column;
   }
+}
+
+.button {
+  background-color: var(--elements-color);
+  cursor: pointer;
+  min-width: 120px;
+  border-radius: 10px;
+  border: none;
+  font-size: 1rem;
+  /* transition: all 0.2s ease-in-out, font-size 0.2s ease; */
+
+  transition: transform 0.2s ease, font-size 0.2s ease;
+  padding: 10px 20px;
+}
+
+.button:hover {
+  transform: scale(1);
+  box-shadow: 0 0 16px 0px rgba(0, 0, 0, 0.2);
+  font-size: 1.2rem;
 }
