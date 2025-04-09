@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import CountryCard from "./CountryCard.jsx";
 
-const CountriesList = ({ query }) => {
+const CountriesList = ({ query, region }) => {
   const [countriesData, setCountriesData] = useState([]);
 
   // const filterCountry = countriesData.filter(() =>
@@ -23,6 +23,7 @@ const CountriesList = ({ query }) => {
           .filter((country) =>
             country.name.common.toLowerCase().includes(query)
           )
+          .filter((country) => country.region.toLowerCase().includes(region))
           .map((country) => {
             return (
               <CountryCard

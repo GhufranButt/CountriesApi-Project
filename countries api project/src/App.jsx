@@ -6,6 +6,7 @@ import CountriesList from "./components/CountriesList";
 
 function App() {
   const [query, setQuery] = useState("");
+  const [region, setRegion] = useState("");
 
   return (
     <>
@@ -13,9 +14,9 @@ function App() {
       <main>
         <div className="search-filter-container">
           <SearchBar setQuery={setQuery} />
-          <SelectMenue />
+          <SelectMenue setRegion={setRegion} />
         </div>
-        <CountriesList query={query} />
+        <CountriesList query={query} region={region} />
       </main>
     </>
   );
