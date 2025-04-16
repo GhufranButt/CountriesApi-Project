@@ -14,7 +14,7 @@ const CountriesList = ({ query, region }) => {
       .then((data) => setCountriesData(data));
   }, []);
 
-  console.log(countriesData);
+  // console.log(countriesData);
 
   return (
     <>

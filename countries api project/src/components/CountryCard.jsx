@@ -1,8 +1,9 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 const CountryCard = ({ name, population, region, capital, flags }) => {
   return (
-    <a className="country-card" href={`/country.html?name=${name}`}>
+    <Link className="country-card" to={`/country?name=${name}`}>
       <img src={flags} alt={name} />
       <div className="card-text">
         <h3 className="card-title">{name}</h3>
@@ -16,7 +17,7 @@ const CountryCard = ({ name, population, region, capital, flags }) => {
           <b>Capital :</b> {capital}
         </p>
       </div>
-    </a>
+    </Link>
   );
 };
 

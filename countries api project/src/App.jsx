@@ -1,25 +1,17 @@
-import { useState } from "react";
-import Header from "./components/Header";
-import SearchBar from "./components/SearchBar";
-import SelectMenue from "./components/SelectMenue";
-import CountriesList from "./components/CountriesList";
-import ResetButton from "./components/ResetButton";
+import Home from "./Home.jsx";
+import Error from "./components/Error.jsx";
+import CountryDetail from "./components/CountryDetail.jsx";
+import { Routes, Route } from "react-router-dom";
 
 function App() {
-  const [query, setQuery] = useState("");
-  const [region, setRegion] = useState("");
-
   return (
     <>
-      <Header />
-      <main>
-        <div className="search-filter-container">
-          <SearchBar setQuery={setQuery} />
-          <ResetButton setQuery={setQuery} setRegion={setRegion} />
-          <SelectMenue setRegion={setRegion} />
-        </div>
-        <CountriesList query={query} region={region} />
-      </main>
+      <Routes>
+        {/* <Route path="/" element={} /> */}
+        <Route path="/" element={<Home />} />
+        <Route path="/*" element={<Error />} />
+        <Route path="/country" element={<CountryDetail />} />
+      </Routes>
     </>
   );
 }
